@@ -47,7 +47,7 @@ jobs:
           # Remote user
           REMOTE_USER: ${{ secrets.USER }}
           # Source directory
-          SOURCE: ./dist/
+          SOURCE: dist/
           # Target directory
           TARGET: /home/nongcundeshifu/website/blog/
         
