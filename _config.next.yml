@@ -1,0 +1,58 @@
+footer:
+  # Specify the date when the site was setup. If not defined, current year will be used.
+  since: 2022
+# Schemes
+# scheme: Muse
+#scheme: Mist
+scheme: Pisces
+# scheme: Gemini
+favicon:
+  small: images/favicon/favicon-16x16.png
+  medium: images/favicon/favicon-32x32.png
+  apple_touch_icon: images/favicon/apple-touch-icon.png
+  safari_pinned_tab: images/favicon/safari-pinned-tab.svg
+  #android_manifest: images/favicon/manifest.json
+  ms_browserconfig: images/favicon/browserconfig.xml
+
+
+local_search:
+  enable: true
+  # If auto, trigger search by changing input.
+  # If manual, trigger search by pressing enter key or search button.
+  trigger: auto
+  # Show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
+  # Unescape html strings to the readable one.
+  unescape: false
+  # Preload the search data when the page loads.
+  preload: false
+
+# Related popular posts
+# Dependencies: https://github.com/tea3/hexo-related-popular-posts
+related_posts:
+  enable: false
+  title: 猜你喜欢 # Custom header, leave empty to use the default one
+  display_in_home: true
+  params:
+    maxCount: 5
+    PPMixingRate: 0.4
+    isDate: true
+    #isImage: false
+    #isExcerpt: false
+
+# Reading progress bar
+reading_progress:
+  enable: true
+  # Available values: top | bottom
+  position: top
+  color: "#37c6c0"
+  height: 2px
+menu:
+  home: / || fa fa-home
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
+  about: /about/ || fa fa-user
+  #schedule: /schedule/ || fa fa-calendar
+  #sitemap: /sitemap.xml || fa fa-sitemap
+  #commonweal: /404/ || fa fa-heartbeat 
