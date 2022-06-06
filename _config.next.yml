@@ -56,3 +56,6 @@ menu:
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat 
+
+# Baidu Analytics
+baidu_analytics: fccebae02559fee441c06d20b32ed0cf
