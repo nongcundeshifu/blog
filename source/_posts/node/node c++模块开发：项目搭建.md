@@ -408,7 +408,7 @@ describe('基础测试', function () {
 
 ### 发布npm包
 
-我们之前配置的package script脚本中，有一个build和一个prepublishOnly命令，build则是打包我们编写的ts部分的源码的，而prepublishOnly则是在使用npm publish时，预先调用addons-rebuild和build命令构建出所需资源。
+我们之前配置的package script脚本中，有一个build和一个prepublishOnly命令，build则是打包我们编写的ts部分的源码的，而prepublishOnly则是在使用npm publish时，预先调用build命令构建出所需资源。
 
 我们目前的src/index.ts下的代码很简单，就是直接导出加载的c++模块：
 

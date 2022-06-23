@@ -49,13 +49,13 @@ add_library(node_addons_template addons/addons.cpp)
 target_link_libraries(node_addons_template hello.lib)
 ```
 
-> 注意，这里面的`C:\\Users\\xxxxxxxxxx\\AppData\\Local\\node-gyp\\Cache\\12.22.7\\include\\node`，其实是安装node-gpy时，它为当前的node版本生成的一些头文件，node-addon-api是需要它们的。通常就是以：`C:\\Users\\{user}\\AppData\\Local\\node-gyp\\Cache\\{node_version}\\include\\node`
+> 注意，这里面的`C:\\Users\\xxxxxxxxxx\\AppData\\Local\\node-gyp\\Cache\\12.22.7\\include\\node`，其实是安装node-gpy时，它为当前的node版本生成的一些头文件，node-addon-api是需要它们的。通常指的是：`C:\\Users\\{user}\\AppData\\Local\\node-gyp\\Cache\\{node_version}\\include\\node` 这个目录
 
 而binding.gyp中，则不需要添加这个node相关的类型定义，因为node-gyp应该是自行添加了。
 
 ## c++代码测试
 
-我们在node层面，通过jest来测试我们的代码，这一部分的测试我们可以涵盖到：加载c++模块，测试c++模块暴露的API是否符合预期，对c++模块进行二次封装等等。但是，我们对于c++部分的测试，却无法涵盖，而且，如果仅仅只有node层面的测试，那么如果问题出现在c++层面，那么我们的调试以及定位问题就会变得非常麻烦，这里我考虑对c++部分添加google test，以实现对c++部分代码的单元测试。
+我们在node层面，通过jest来测试我们的代码，这一部分的测试我们可以涵盖到：测试加载c++模块是否正常，测试c++模块暴露的API是否符合预期，测试其他js代码等等。但是，我们对于c++部分的测试，却无法涵盖，而且，如果仅仅只有node层面的测试，那么如果问题出现在c++层面，那么我们的调试以及定位问题就会变得非常麻烦，这里我考虑对c++部分添加google test，以实现对c++部分代码的单元测试。
 
 在根目录下新建一个addons/test/bash.test.cpp文件，然后我们需要修改CMakeLists.txt文件，在文件下方添加如下代码：
 
@@ -105,7 +105,7 @@ TEST(baseTest, hello) { // NOLINT(cert-err58-cpp)
 
 ![测试结果](https://image.ncdsf.com/2022/06/22/20220622144709.png)
 
-> 注意，google test只能测试第三方库或者封装第三方库的那些c++代码，它`无法测试包含node-addon-api库的哪些c++代码`，即和node相关的那些c++代码是无法进行测试的，因为无法同node一样提供相关环境。目前我还在尝试找到解决方案。
+> 注意，google test只能测试第三方库或者封装第三方库的那些c++代码，它`无法测试包含node-addon-api库的那些c++代码`，即和node相关的那些c++代码是无法进行测试的，因为无法同node一样提供相关环境。目前我还在尝试找到解决方案。
 
 ### 添加ts类型定义
 
@@ -140,7 +140,7 @@ export function loadAddons(): NodeAddonsTemplate {
 
 此时，我们在通过loadAddons方法加载我们的node c++模块时，其获取的就是一个`NodeAddonsTemplate`类型的对象，此时相关的API就具有了类型提示，且增强了重构能力，这也是为何单独为加载node c++模块添加一个方法的原因。
 
-### 关于二次封装node c++模块考虑
+### 关于二次封装node c++模块的考虑
 
 可能有些人会疑惑，为什么需要添加ts和rollup打包来增加项目的复杂度？有什么必要吗？
 
