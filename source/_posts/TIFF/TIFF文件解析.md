@@ -286,7 +286,7 @@ const tiffTagTypeMap = new Map()
             size: 1,
             description: '8位无符号整数。',
             getValue: (data: Buffer) => {
-                // 根据改类型去解析该值
+                // 根据该类型去解析该值
             },
         })
         .set(2, {
@@ -302,7 +302,7 @@ const tiffTagTypeMap = new Map()
             size: 2,
             description: '16位（2 字节）无符号整数。',
             getValue: (data: Buffer) => {
-                // 根据改类型去解析该值
+                // 根据该类型去解析该值
             },
         })
         .set(4, {
@@ -310,7 +310,7 @@ const tiffTagTypeMap = new Map()
             size: 4,
             description: '32 位（4 字节）无符号整数。',
             getValue: (data: Buffer) => {
-                // 根据改类型去解析该值
+                // 根据该类型去解析该值
             },
         })
         .set(5, {
@@ -351,7 +351,7 @@ const tiffTagTypeMap = new Map()
             size: 4,
             description: '单精度（4 字节）IEEE 格式。',
             getValue: (data: Buffer) => {
-                // 根据改类型去解析该值
+                // 根据该类型去解析该值
             },
         })
         .set(12, {
@@ -359,7 +359,7 @@ const tiffTagTypeMap = new Map()
             size: 8,
             description: '双精度（8 字节）IEEE 格式。',
             getValue: (data: Buffer) => {
-                // 根据改类型去解析该值
+                // 根据该类型去解析该值
             },
         })
         .set(16, {
@@ -367,7 +367,7 @@ const tiffTagTypeMap = new Map()
             size: 8,
             description: 'bigTiff支持的无符号 8',
             getValue: (data: Buffer) => {
-                // 根据改类型去解析该值
+                // 根据该类型去解析该值
             },
         })
         .set(17, {
@@ -375,7 +375,7 @@ const tiffTagTypeMap = new Map()
             size: 8,
             description: 'bigTiff支持的有符号 8',
             getValue: (data: Buffer) => {
-                // 根据改类型去解析该值
+                // 根据该类型去解析该值
             },
         })
         .set(18, {
@@ -383,12 +383,12 @@ const tiffTagTypeMap = new Map()
             size: 8,
             description: 'bigTiff支持的无符号 8 字节 IFD 偏移量',
             getValue: (data: Buffer) => {
-                // 根据改类型去解析该值
+                // 根据该类型去解析该值
             },
         })
 ```
 
-一个基于TIFF实现的数字切片文件所解析出来的的结果如下：
+一个基于TIFF实现的数字切片文件所解析出来的结果如下：
 
 ![解析tiff的结果](https://image.ncdsf.com/2022/07/06/20220706170054.png)
 ![解析tiff的结果](https://image.ncdsf.com/2022/07/06/20220706165852.png)
