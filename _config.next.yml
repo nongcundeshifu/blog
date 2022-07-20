@@ -59,3 +59,19 @@ menu:
 
 # Baidu Analytics
 baidu_analytics: fccebae02559fee441c06d20b32ed0cf
+
+motion:
+  enable: false
+
+creative_commons:
+  post: true
+
+avatar:
+  # Replace the default image and set the url here.
+  url: /images/avatar.png
+  # If true, the avatar will be dispalyed in circle.
+  rounded: true
+
+social:
+  E-Mail: mailto:nongcundeshifu@gmail.com || fa fa-envelope
+  # GitHub: https://github.com/nongcundeshifu || fab fa-github
