@@ -110,7 +110,7 @@ ps：大部分情况下，中途其实是可以换的。很多时候你觉得当
 
 ##### 功能测试
 
-具体细节可以参考：[npm包项目-基于puppeteer的功能测试](/)
+具体细节可以参考：[npm包项目-基于puppeteer的功能测试](/2024/03/20/前端工程化/npm包项目-基于puppeteer的功能测试/)
 
 这三种测试方式的对比：
 
@@ -122,7 +122,7 @@ ps：大部分情况下，中途其实是可以换的。很多时候你觉得当
 
 #### multirepo到monorepo
 
-参考：[npm包项目-multirepo到monorepo的演进](/)
+参考：[npm包项目-multirepo到monorepo的演进](/2024/04/22/前端工程化/npm包项目-multirepo到monorepo的演进/)
 
 #### 版本控制
 
@@ -135,11 +135,11 @@ ps：大部分情况下，中途其实是可以换的。很多时候你觉得当
 - 在你开发完毕后，利用changeset命令来自动更新你的包版本：主要版本、次要版本、补丁、beta、alpha、rc等
 - 自动修改依赖包的版本号，并且可以帮你发布到npm仓库中
 
-具体的使用方法可以参考文档：<https://github.com/changesets/changesets/blob/main/packages/cli/README.md>
+具体的使用方式参考：<https://github.com/changesets/changesets/blob/main/packages/cli/README.md>
 
 #### 文档编写
 
-参考：[npm包项目-文档编写](/)
+参考：[npm包项目-文档编写](/2024/05/03/前端工程化/npm包项目-文档编写/)
 
 #### 发布
 
