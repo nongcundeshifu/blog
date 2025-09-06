@@ -23,13 +23,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3.0.0
+        uses: actions/setup-node@v5
         with:
           # Set always-auth in npmrc
-          node-version: 12.22.7
+          node-version: 12
           # Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm
           cache: yarn
       - name: insalling
